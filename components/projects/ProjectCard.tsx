@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Project } from "@/data/projects";
 
 type Props = {
@@ -22,32 +23,36 @@ export default function ProjectCard({ project }: Props) {
         hover:shadow-blue-500/10
       "
     >
-      {/* Image Placeholder */}
+      {/* Project Image */}
 
-      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-blue-500/20 via-slate-900 to-violet-500/20">
-
-        <div
+      <div className="relative h-64 overflow-hidden">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="
-            absolute
-            inset-0
+            object-cover
             transition-transform
             duration-500
             group-hover:scale-110
           "
         />
 
-        <div className="absolute bottom-5 left-5">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-          <span className="rounded-full bg-black/40 px-3 py-1 text-xs uppercase tracking-widest text-blue-300 backdrop-blur-md">
+        {/* Category Badge */}
+        <div className="absolute bottom-5 left-5">
+          <span className="rounded-full bg-black/50 px-3 py-1 text-xs uppercase tracking-widest text-blue-300 backdrop-blur-md">
             {project.category}
           </span>
-
         </div>
-
       </div>
 
-      <div className="p-8">
+      {/* Content */}
 
+      <div className="p-8">
         <h3 className="text-3xl font-bold text-white">
           {project.title}
         </h3>
@@ -66,9 +71,7 @@ export default function ProjectCard({ project }: Props) {
         >
           Discover Project →
         </button>
-
       </div>
-
     </article>
   );
 }

@@ -4,7 +4,7 @@ import Heading from "../ui/Heading";
 
 export default function About() {
   return (
-    <Section>
+    <Section id="about">
 
       <Container>
 

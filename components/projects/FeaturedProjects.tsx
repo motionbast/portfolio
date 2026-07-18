@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function FeaturedProjects() {
   return (
-    <Section>
+    <Section id="projects">
 
       <Container>
 

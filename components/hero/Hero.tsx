@@ -16,9 +16,9 @@ export default function Hero() {
         justify-center
         overflow-hidden
         px-6
-        py-24
+        pt-24
+        pb-20
         md:px-10
-        md:py-0
       "
     >
       <Background />
@@ -28,6 +28,7 @@ export default function Hero() {
           relative
           z-10
           mx-auto
+          mt-10
           flex
           w-full
           max-w-6xl
@@ -36,31 +37,35 @@ export default function Hero() {
           text-center
         "
       >
+        {/* Name */}
+
+        <AnimatedTitle />
+
+        {/* Subtitle */}
+
         <Badge>
-          Creative Technical Artist
+          Technical Artist • Blender Developer
         </Badge>
 
-        <div className="mt-6 md:mt-8">
-          <AnimatedTitle />
-        </div>
+        {/* Description */}
 
         <p
           className="
-            mt-6
-            max-w-2xl
+            mt-2
+            max-w-3xl
             px-2
             text-base
             leading-8
             text-gray-300
-            md:mt-8
             md:px-0
             md:text-lg
           "
         >
-          Building tools, crafting visuals and empowering artists through
-          Blender development, motion design and real-time production
-          workflows.
+          Building production tools, crafting cinematic visuals and developing
+          real-time workflows for artists, studios and creative pipelines.
         </p>
+
+        {/* Buttons */}
 
         <div
           className="
@@ -79,7 +84,10 @@ export default function Hero() {
             Explore Portfolio
           </Button>
 
-          <button
+          <a
+            href="/cv/Sebastien_Lubin_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               rounded-full
               border
@@ -93,14 +101,18 @@ export default function Hero() {
             "
           >
             Download CV
-          </button>
+          </a>
         </div>
+
+        {/* Social Links */}
 
         <div className="mt-12">
           <SocialLinks />
         </div>
 
-        <div className="mt-12 md:mt-20">
+        {/* Scroll */}
+
+        <div className="mt-20">
           <ScrollIndicator />
         </div>
       </div>

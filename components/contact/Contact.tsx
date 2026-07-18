@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 
 export default function Contact() {
   return (
-    <Section>
+    <Section id="contact">
 
       <Container>
 
@@ -26,27 +26,50 @@ export default function Contact() {
 
           <div className="mt-12 flex flex-wrap justify-center gap-4">
 
-            <Button>
-              Contact Me
-            </Button>
+           <a
+  href="mailto:lubinsebastien@gmail.com?subject=Portfolio%20Contact"
+  className="
+    inline-flex
+    items-center
+    justify-center
+    rounded-full
+    bg-blue-600
+    px-8
+    py-3
+    font-medium
+    text-white
+    transition
+    hover:bg-blue-500
+  "
+>
+  Contact Me
+</a>
 
-            <a
-              href="/cv.pdf"
-              target="_blank"
-              className="
-                rounded-full
-                border
-                border-white/10
-                px-8
-                py-3
-                text-white
-                transition
-                hover:border-blue-500/40
-                hover:bg-white/5
-              "
-            >
-              Download CV
-            </a>
+<a
+  href="/cv/Sebastien_Lubin_CV.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    inline-flex
+    items-center
+    justify-center
+    rounded-full
+    border
+    border-blue-500/40
+    bg-transparent
+    px-8
+    py-3
+    font-medium
+    text-blue-500
+    transition-all
+    duration-300
+    hover:bg-blue-500
+    hover:text-white
+    hover:border-blue-500
+  "
+>
+  Download CV
+</a>
 
           </div>
 
